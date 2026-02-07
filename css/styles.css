@@ -184,9 +184,10 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+    mask-image: linear-gradient(rgba(0,0,0,1)75%, rgba(0,0,0,0));
 }
 
-.hero::after {
+/*.hero::after {
     content: '';
     display: block;
     position: absolute;
@@ -194,11 +195,25 @@ body {
     height: 22%;
     bottom: 0;
     background: linear-gradient(0deg, rgba(155, 144, 144,1)8%, rgba(155, 144, 144,0) 55%);
+}*/
+
+.hero .mask-container{
+    position: absolute;
+    /*background:salmon;*/
+    inset:0;
+    mask-image: url('../img/Coffee.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
 }
 
 .hero .content{
     padding: 1.4rem 7%;
-    max-width: 60rem;
+    /*max-width: 60rem;*/
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top :100px;
 }
 .hero .content h1 {
     font-size: 5em;
@@ -263,7 +278,10 @@ body {
 
 .about .row .about-img img {
     width: 100%;
-    border-radius: 5rem;
+    mask-image: url('../img/menu/CoffeeMask.svg');
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 
 .about .row .content{
@@ -301,7 +319,6 @@ body {
     display: flex;
     flex-wrap:wrap;
     margin-top: 5rem;
-    justify-content:center;
 }
 
 
@@ -322,16 +339,15 @@ body {
 
 /* products section */
 .products .row{
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap:1rem;
-    margin-top: 3.2rem;
-    justify-content: center;
+    margin-top: 3rem;
 }
 
-.products .products-card{
-    text-align: center;
-    padding: 3rem;
+.products .products-card{ 
+    text-align: center; 
+    padding: 1rem;
     border: 1px solid var(--primary-color);
 }
 
@@ -345,7 +361,7 @@ body {
     width:  4rem;
     height: 4rem;
     color: white;
-    margin:0.5rem;
+    margin:1.2rem;
     border:1px solid rgb(238, 238, 238);
     border-radius: 50%;
     display: flex;
@@ -358,7 +374,7 @@ body {
     border-color: 1px solid var(--primary-color);
 }
 .products .products-img img{
-    height: 13rem;
+    height: 20rem;
 }
 
 .products .products-content h3{
