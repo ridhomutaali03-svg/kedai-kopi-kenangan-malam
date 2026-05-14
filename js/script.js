@@ -45,7 +45,7 @@ document.addEventListener('click', function(e){
 
 
 
-// Modal Box
+/*/ Modal Box
 const itemDetailModal = document.querySelector('#item-detail-modal');
 const itemDetailButtons = document.querySelectorAll('.item-detail-button');
 
@@ -66,5 +66,5 @@ window.onclick = (e) => {
     if(e.target === itemDetailModal){
         itemDetailModal.style.display = 'none';
     }
-};
+}; /*/
 
